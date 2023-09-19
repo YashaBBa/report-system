@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/dive-dev
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5444/report-system
+    username: yasha
+    password: password
+  cloud:
+    config:
+      uri: http:/localhost:8888
+

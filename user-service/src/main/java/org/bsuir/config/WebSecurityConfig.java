@@ -36,11 +36,11 @@ public class WebSecurityConfig {
         http.csrf(t -> t.disable());
         http.authorizeRequests(auth -> auth
                 .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/actuator/**").permitAll()
+                .regexMatchers(HttpMethod.POST, "/api/v1/users").permitAll()
                 .anyRequest().authenticated()
         );
-        http.oauth2ResourceServer(t-> {
+        http.oauth2ResourceServer(t -> {
             t.jwt(Customizer.withDefaults());
-            //t.opaqueToken(Customizer.withDefaults());
         });
         http.sessionManagement(
                 t -> t.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -58,7 +58,7 @@ public class WebSecurityConfig {
 
     @Bean
     public JwtAuthenticationConverter con() {
-        JwtAuthenticationConverter c =new JwtAuthenticationConverter();
+        JwtAuthenticationConverter c = new JwtAuthenticationConverter();
         JwtGrantedAuthoritiesConverter cv = new JwtGrantedAuthoritiesConverter();
         cv.setAuthorityPrefix(""); // Default "SCOPE_"
         cv.setAuthoritiesClaimName("roles"); // Default "scope" or "scp"

@@ -20,6 +20,7 @@
         <spring.boot.maven.plugin.version>2.7.5</spring.boot.maven.plugin.version>
         <spring.boot.dependdencies.version>2.7.5</spring.boot.dependdencies.version>
         <spring.cloud.dependencies.version>2021.0.5</spring.cloud.dependencies.version>
+        <hibernate.validator.version>6.2.5.Final</hibernate.validator.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -52,6 +53,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
         </dependency>
 
 

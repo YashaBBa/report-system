@@ -16,6 +16,7 @@ spring:
           uri: http://localhost:8081/messages
           predicates:
             - Path=/messages/**
+            - Path=/api/**
 
 
 

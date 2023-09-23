@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="386d8646-1862-4825-825d-4e037b6561da" name="Changes" comment="add spring sq/keycloack authorization">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/controller/LoginationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/user-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/keycloack/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/keycloack/KeycloakConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/dto/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/dto/request/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/dto/response/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geteway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/geteway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/bsuir/repo/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,39 +56,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "E:/Study/7 sem/Kursach/report-system/user-service/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "3b386768e748a2cd23f3766c8069f3e5",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Study/7 sem/Kursach/report-system/user-service/src/main/java/org/bsuir/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3b386768e748a2cd23f3766c8069f3e5&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Study\7 sem\Kursach\report-system\user-service\src\main\java\org\bsuir\config" />
       <recent name="E:\Study\7 sem\Kursach\report-system\user-service\src\main\resources" />
       <recent name="E:\Study\7 sem\Kursach\report-system\user-service\src\main\resources\templates" />
       <recent name="E:\Study\7 sem\Kursach\report-system\eureka-service\src\main\resources" />
       <recent name="E:\Study\7 sem\Kursach\report-system\geteway-service\src\main\resources" />
-      <recent name="E:\Study\7 sem\Kursach\report-system" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.bsuir.config" />
@@ -178,7 +186,9 @@
       <workItem from="1694766737185" duration="5621000" />
       <workItem from="1695045768129" duration="4592000" />
       <workItem from="1695118391386" duration="1480000" />
-      <workItem from="1695205561698" duration="13578000" />
+      <workItem from="1695205561698" duration="16123000" />
+      <workItem from="1695370757280" duration="14938000" />
+      <workItem from="1695471499635" duration="5133000" />
     </task>
     <task id="LOCAL-00001" summary="added not config keycloak &#10;added gateway &#10;added discovery service">
       <created>1695122741310</created>
@@ -187,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695122741310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add spring sq/keycloack authorization">
+      <created>1695238771105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695238771105</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +225,12 @@
     <MESSAGE value="added not config keycloak &#10;added gateway &#10;added discovery service" />
     <MESSAGE value="add spring sq/keycloack authorization" />
     <option name="LAST_COMMIT_MESSAGE" value="add spring sq/keycloack authorization" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="response" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

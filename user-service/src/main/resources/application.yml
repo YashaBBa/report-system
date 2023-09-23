@@ -23,3 +23,14 @@ spring:
     config:
       uri: http:/localhost:8888
 
+idm:
+  realm-name: "dive-dev"
+  server-url: "${KEYCLOAK_URI:http://localhost:8080}"
+  client-id: "springboot-be"
+  client-secret: "lEuEoPpn6Ag3cyK7R8qgtUgJkdxReDHx"
+  admin-username: "admin"
+  admin-password: "admin"
+  pool-size: 10
+
+
+
